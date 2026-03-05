@@ -4,39 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comunidad Villa Rosario - Plataforma Informativa</title>
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="css/estilo.css"sss>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="imagenes/logoVilla.png">.
+
+
 </head>
 <body>
     <!-- Barra de Navegación -->
     <nav class="navbar">
         <div class="nav-container">
             <a href="index.html" class="logo">
-                <img src="img/logo-villa-rosario.png" alt="Logo Villa Rosario" id="logo-img">
+                <img src="imagenes/logoVilla.png" alt="Logo Villa Rosario" id="logo-img">
                 <div class="logo-text">
                     <span class="logo-title">VILLA ROSARIO</span>
                     <span class="logo-subtitle">Comunidad Organizada</span>
                 </div>
-            </a>
+            </a>s
             
             <input type="checkbox" id="menu-toggle" class="menu-toggle">
             <label for="menu-toggle" class="menu-btn">
                 <i class="fas fa-bars"></i>
             </label>
-             <ul class="nav-menu" id="navMenu">
+            <ul class="nav-menu">
                 <li><a href="index.html" class="active"><i class="fas fa-home"></i> Inicio</a></li>
                 <li><a href="consejo-comunal.html"><i class="fas fa-users"></i> Consejo Comunal</a></li>
                 <li><a href="articulos.html"><i class="fas fa-newspaper"></i> Noticias</a></li>
                 <li><a href="servicios.html"><i class="fas fa-bolt"></i> Servicios</a></li>
                 <li><a href="reportes.html"><i class="fas fa-flag"></i> Reportar Problema</a></li>
                 <li><a href="emprendedores.html"><i class="fas fa-store"></i> Emprendedores</a></li>
-                <li><a href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a></li>
+                <li><a href="conctato.html"><i class="fas fa-envelope"></i> Contacto</a></li>
             </ul>
         </div>
-            
+    </nav>
 
-    <!-- Encabezado Hero con información de la comunidad -->
+    <!-- Encabezado Hero - Versión más compacta -->
     <header class="hero">
         <div class="hero-content">
             <h1>Bienvenidos a Villa Rosario</h1>
@@ -61,163 +64,189 @@
                 </div>
             </div>
         </div>
-        <div class="hero-overlay"></div>
     </header>
 
-    <!-- Sección de Alertas Urgentes -->
-    <section class="alertas">
-        <div class="container">
-            <h2><i class="fas fa-bullhorn"></i> Alertas Comunitarias</h2>
-            <div class="alertas-grid">
-                <div class="alerta-item alerta-urgente">
+    <!-- Sección de Alertas - Diseño uniforme mejorado -->
+<section class="alertas">
+    <div class="container">
+        <h2><i class="fas fa-bullhorn"></i> Alertas Comunitarias</h2>
+        
+        <div class="alertas-grid">
+            <!-- Alerta 1 (roja) -->
+            <div class="alerta-item">
+                <div class="alerta-header">
                     <div class="alerta-icon">
                         <i class="fas fa-exclamation-triangle"></i>
                     </div>
-                    <div class="alerta-content">
-                        <h3>Corte Programado de Agua</h3>
-                        <p>Este viernes 15 de marzo, de 9:00 a 16:00 horas por mantenimiento de HIDROCARIBE</p>
-                        <span class="alerta-fecha"><i class="far fa-calendar"></i> Publicado: 12/03/2024</span>
+                    <h3 class="alerta-titulo">¡Corte de Agua!</h3>
+                </div>
+                <div class="alerta-contenido">
+                    <p class="alerta-descripcion">
+                        Este viernes 22 de marzo, de 8:00 a 16:00 horas, 
+                        mantenimiento programado por HIDROCARIBE. 
+                        Almacena agua con anticipación.
+                    </p>
+                    <div class="alerta-fecha">
+                        <i class="far fa-calendar"></i>
+                        Publicado: 12/03/2024
                     </div>
                 </div>
-                
-                <div class="alerta-item alerta-info">
+            </div>
+            
+            <!-- Alerta 2 (azul) -->
+            <div class="alerta-item">
+                <div class="alerta-header">
                     <div class="alerta-icon">
-                        <i class="fas fa-info-circle"></i>
+                        <i class="fas fa-users"></i>
                     </div>
-                    <div class="alerta-content">
-                        <h3>Asamblea Ciudadana</h3>
-                        <p>Reunión general este sábado a las 10:00 AM en el centro comunitario</p>
-                        <span class="alerta-fecha"><i class="far fa-calendar"></i> Publicado: 10/03/2024</span>
+                    <h3 class="alerta-titulo">Asamblea General</h3>
+                </div>
+                <div class="alerta-contenido">
+                    <p class="alerta-descripcion">
+                        Este sábado 16 de marzo a las 10:00 AM en la Casa Comunal. 
+                        Trataremos temas sobre servicios públicos y proyectos.
+                    </p>
+                    <div class="alerta-fecha">
+                        <i class="far fa-calendar"></i>
+                        Publicado: 10/03/2024
                     </div>
                 </div>
-                
-                <div class="alerta-item alerta-evento">
+            </div>
+            
+            <!-- Alerta 3 (verde) -->
+            <div class="alerta-item">
+                <div class="alerta-header">
                     <div class="alerta-icon">
                         <i class="fas fa-calendar-check"></i>
                     </div>
-                    <div class="alerta-content">
+                    <h3 class="alerta-titulo">Jornada de Salud</h3>
+                </div>
+                <div class="alerta-contenido">
+                    <p class="alerta-descripcion">
+                        Vacunación para niños y adultos este domingo 24 de marzo 
+                        en la Casa Comunal. Trae tu carnet.
+                    </p>
+                    <div class="alerta-fecha">
+                        <i class="far fa-calendar"></i>
+                        Publicado: 08/03/2024
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Sección Carrusel de Imágenes (reemplaza a Comités) -->
+<section class="carrusel">
+    <div class="container">
+        <h2><i class="fas fa-images"></i> Galería Comunitaria</h2>
+        <p class="section-subtitle">Momentos destacados de nuestra comunidad</p>
+        
+        <div class="carrusel-contenedor">
+            <div class="carrusel-slides">
+                <div class="carrusel-slide active">
+                    <img src="imagenes/carrusel1.png" alt="Asamblea comunitaria">
+                    <div class="carrusel-caption">
+                        <h3>Asamblea General 2026</h3>
+                        <p>Participación masiva de los vecinos</p>
+                    </div>
+                </div>
+                <div class="carrusel-slide">
+                    <img src="imagenes/carrusel1.png" alt="Jornada de salud">
+                    <div class="carrusel-caption">
+                        <h3>Jornada de Vacunación</h3>
+                        <p>Más de 100 niños vacunados</p>
+                    </div>
+                </div>
+                <div class="carrusel-slide">
+                    <img src="img/carrusel3.jpg" alt="Entrega de CLAP">
+                    <div class="carrusel-caption">
+                        <h3>Entrega de Alimentos</h3>
+                        <p>Apoyo a las familias de la comunidad</p>
+                    </div>
+                </div>
+                <div class="carrusel-slide">
+                    <img src="img/carrusel4.jpg" alt="Limpieza comunitaria">
+                    <div class="carrusel-caption">
                         <h3>Jornada de Limpieza</h3>
-                        <p>Participa este domingo en la limpieza comunitaria del parque central</p>
-                        <span class="alerta-fecha"><i class="far fa-calendar"></i> Publicado: 08/03/2024</span>
+                        <p>Embelleciendo nuestros espacios</p>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sección de Comités de Trabajo -->
-    <section class="comites">
-        <div class="container">
-            <h2>Comités de Trabajo de la Comunidad</h2>
-            <p class="section-subtitle">Organización comunitaria activa para el bienestar de todos</p>
-            
-            <div class="comites-grid">
-                <div class="comite-card">
-                    <div class="comite-icon">
-                        <i class="fas fa-tint"></i>
-                    </div>
-                    <h3>Mesa Técnica de Agua</h3>
-                    <p>Gestión y seguimiento del servicio de agua potable</p>
-                </div>
-                
-                <div class="comite-card">
-                    <div class="comite-icon">
-                        <i class="fas fa-bolt"></i>
-                    </div>
-                    <h3>Energía y Gas</h3>
-                    <p>Control y mejoras en servicios eléctricos y de gas</p>
-                </div>
-                
-                <div class="comite-card">
-                    <div class="comite-icon">
-                        <i class="fas fa-bullhorn"></i>
-                    </div>
-                    <h3>Medios Comunitarios</h3>
-                    <p>Comunicación e información para la comunidad</p>
-                </div>
-                
-                <div class="comite-card">
-                    <div class="comite-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3>Seguridad Integral</h3>
-                    <p>Vigilancia y prevención comunitaria</p>
-                </div>
-                
-                <div class="comite-card">
-                    <div class="comite-icon">
-                        <i class="fas fa-heartbeat"></i>
-                    </div>
-                    <h3>Salud Comunitaria</h3>
-                    <p>Promoción de salud y prevención de enfermedades</p>
-                </div>
-                
-                <div class="comite-card">
-                    <div class="comite-icon">
-                        <i class="fas fa-home"></i>
-                    </div>
-                    <h3>Vivienda y Hábitat</h3>
-                    <p>Mejora de infraestructura y espacios públicos</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sección de Noticias Destacadas -->
-    <section class="noticias">
-        <div class="container">
-            <h2>Últimas Noticias de la Comunidad</h2>
-            <p class="section-subtitle">Información oficial del Consejo Comunal</p>
-            
-            <div class="noticias-grid">
-                <article class="noticia-card">
-                    <div class="noticia-header">
-                        <span class="noticia-categoria">Servicios Públicos</span>
-                        <span class="noticia-fecha">10 Mar 2024</span>
-                    </div>
-                    <div class="noticia-body">
-                        <h3>Actualización sobre el Servicio de Aseo Urbano</h3>
-                        <p>Se han establecido nuevos acuerdos con SERVIA MSA para mejorar la frecuencia de recolección de desechos sólidos...</p>
-                    </div>
-                    <div class="noticia-footer">
-                        <a href="#" class="btn-leer-mas">Leer más <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </article>
-                
-                <article class="noticia-card">
-                    <div class="noticia-header">
-                        <span class="noticia-categoria">Infraestructura</span>
-                        <span class="noticia-fecha">5 Mar 2024</span>
-                    </div>
-                    <div class="noticia-body">
-                        <h3>Avances en la Gestión para el Asfaltado</h3>
-                        <p>El Consejo Comunal ha presentado formalmente la solicitud para el asfaltado de las 4 calles principales...</p>
-                    </div>
-                    <div class="noticia-footer">
-                        <a href="#" class="btn-leer-mas">Leer más <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </article>
-                
-                <article class="noticia-card">
-                    <div class="noticia-header">
-                        <span class="noticia-categoria">CLAP</span>
-                        <span class="noticia-fecha">28 Feb 2024</span>
-                    </div>
-                    <div class="noticia-body">
-                        <h3>Próxima Entrega del CLAP</h3>
-                        <p>Se informa a la comunidad que la próxima entrega de alimentos está programada para la última semana de marzo...</p>
-                    </div>
-                    <div class="noticia-footer">
-                        <a href="#" class="btn-leer-mas">Leer más <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </article>
             </div>
             
-            <div class="text-center">
-                <a href="articulos.html" class="btn-ver-todas">Ver todas las noticias</a>
+            <!-- Botones de navegación -->
+            <button class="carrusel-prev"><i class="fas fa-chevron-left"></i></button>
+            <button class="carrusel-next"><i class="fas fa-chevron-right"></i></button>
+            
+            <!-- Indicadores (puntos) -->
+            <div class="carrusel-indicadores">
+                <span class="indicador active" data-slide="0"></span>
+                <span class="indicador" data-slide="1"></span>
+                <span class="indicador" data-slide="2"></span>
+                <span class="indicador" data-slide="3"></span>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+   <!-- Sección de Noticias Destacadas (mejorada) -->
+<!-- Sección de Noticias Destacadas - Mejorada -->
+<section class="noticias">
+    <div class="container">
+        <h2>Últimas Noticias de la Comunidad</h2>
+        <p class="section-subtitle">Información oficial del Consejo Comunal</p>
+        
+        <div class="noticias-grid">
+            <!-- Noticia 1: Servicios Públicos (rojo) -->
+            <article class="noticia-card" data-categoria="servicios">
+                <div class="noticia-header">
+                    <span class="noticia-categoria">Servicios Públicos</span>
+                    <span class="noticia-fecha"><i class="far fa-calendar-alt"></i> 10 Mar 2024</span>
+                </div>
+                <div class="noticia-body">
+                    <h3>Actualización sobre el Servicio de Aseo Urbano</h3>
+                    <p>Se han establecido nuevos acuerdos con SERVIA MSA para mejorar la frecuencia de recolección de desechos sólidos. La comunidad organizada supervisará el cumplimiento.</p>
+                </div>
+                <div class="noticia-footer">
+                    <a href="noticia.html?id=1" class="btn-leer-mas">Leer más <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+            
+            <!-- Noticia 2: Infraestructura (naranja) -->
+            <article class="noticia-card" data-categoria="infraestructura">
+                <div class="noticia-header">
+                    <span class="noticia-categoria">Infraestructura</span>
+                    <span class="noticia-fecha"><i class="far fa-calendar-alt"></i> 5 Mar 2024</span>
+                </div>
+                <div class="noticia-body">
+                    <h3>Avances en la Gestión para el Asfaltado</h3>
+                    <p>El Consejo Comunal ha presentado formalmente la solicitud para el asfaltado de las 4 calles principales. Se espera respuesta en los próximos 30 días.</p>
+                </div>
+                <div class="noticia-footer">
+                    <a href="noticia.html?id=2" class="btn-leer-mas">Leer más <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+            
+            <!-- Noticia 3: CLAP (verde) -->
+            <article class="noticia-card" data-categoria="clap">
+                <div class="noticia-header">
+                    <span class="noticia-categoria">CLAP</span>
+                    <span class="noticia-fecha"><i class="far fa-calendar-alt"></i> 28 Feb 2024</span>
+                </div>
+                <div class="noticia-body">
+                    <h3>Próxima Entrega del CLAP</h3>
+                    <p>Se informa a la comunidad que la próxima entrega de alimentos está programada para la última semana de marzo. Estén atentos a las convocatorias por calle.</p>
+                </div>
+                <div class="noticia-footer">
+                    <a href="noticia.html?id=3" class="btn-leer-mas">Leer más <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+        </div>
+        
+        <div class="text-center">
+            <a href="articulos.html" class="btn-ver-todas">Ver todas las noticias</a>
+        </div>
+    </div>
+</section>
 
     <!-- Sección de Servicios Públicos -->
     <section class="servicios-publicos">
@@ -324,15 +353,9 @@
                     <p>Fundada en 2009</p>
                     
                     <div class="footer-social">
-                        <a href="#" class="social-link whatsapp">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                        <a href="#" class="social-link facebook">
-                            <i class="fab fa-facebook"></i>
-                        </a>
-                        <a href="#" class="social-link instagram">
-                            <i class="fab fa-instagram"></i>
-                        </a>
+                        <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
                 
@@ -349,7 +372,7 @@
                 
                 <div class="footer-col">
                     <h3>Contacto de Emergencia</h3>
-                    <ul class="contacto-info">
+                    <ul>
                         <li><i class="fas fa-phone"></i> Líderes Comunitarios: 0412-XXX-XXXX</li>
                         <li><i class="fas fa-bolt"></i> CORPOELEC: 0800-ELECTRIC</li>
                         <li><i class="fas fa-tint"></i> HIDROCARIBE: 0800-AGUA-NOW</li>
@@ -360,15 +383,12 @@
                 <div class="footer-col">
                     <h3>Grupo de WhatsApp</h3>
                     <p>Únete al grupo oficial de la comunidad para recibir alertas inmediatas:</p>
-                    <a href="#" class="btn-whatsapp">
-                        <i class="fab fa-whatsapp"></i> Unirse al Grupo
-                    </a>
+                    <a href="#" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> Unirse al Grupo</a>
                     
                     <div class="qr-code">
                         <p>Escanea el código QR para acceder rápido:</p>
                         <div class="qr-placeholder">
-                            <i class="fas fa-qrcode"></i>
-                            <span>Código QR del grupo</span>
+                            <i class="fas fa-qrcode"></i> QR
                         </div>
                     </div>
                 </div>
