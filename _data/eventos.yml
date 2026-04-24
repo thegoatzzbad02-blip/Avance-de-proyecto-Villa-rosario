@@ -1,0 +1,9 @@
+eventos:
+  - titulo: "Asamblea General"
+    fecha_hora: "2025-03-16T10:00:00Z"
+    lugar: "Casa Comunal"
+    descripcion: "Se tratarán temas de servicios públicos, presupuesto participativo y proyectos comunitarios."
+  - titulo: "Jornada de Limpieza"
+    fecha_hora: "2025-03-24T09:00:00Z"
+    lugar: "Parque Central"
+    descripcion: "Reunión en la cancha deportiva. Trae tus herramientas para embellecer nuestros espacios."

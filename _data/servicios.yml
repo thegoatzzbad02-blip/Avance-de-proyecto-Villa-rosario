@@ -1,0 +1,19 @@
+agua:
+  estado: "deficiente"
+  texto: "Proveedor: HIDROCARIBE. Frecuencia: cada 15 días. Última actualización: hoy"
+electricidad:
+  estado: "regular"
+  texto: "Proveedor: CORPOELEC. Cortes frecuentes (2-3 veces por semana)."
+aseo:
+  estado: "critico"
+  texto: "Proveedor: SERVIA MSA. No pasa con regularidad. La comunidad organiza limpiezas."
+internet:
+  estado: "optimo"
+  texto: "Proveedores privados. Buena cobertura y varias opciones."
+gestiones:
+  - fecha: "2025-03-15"
+    descripcion: "Reunión con HIDROCARIBE para mejorar frecuencia de agua."
+  - fecha: "2025-03-10"
+    descripcion: "Reporte masivo de fallas eléctricas ante CORPOELEC."
+  - fecha: "2025-03-05"
+    descripcion: "Jornada de limpieza comunitaria por falta de aseo."
