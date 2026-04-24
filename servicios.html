@@ -20,34 +20,34 @@
 
     <main>
         <div class="container">
-            <!-- Grid de servicios con IDs específicos para actualización dinámica -->
+            <!-- Grid de servicios con datos estáticos -->
             <div class="servicios-estado">
                 <div id="servicio-agua" class="servicio-estado">
                     <div class="servicio-header"><i class="fas fa-tint"></i><h3>Agua Potable</h3></div>
                     <div class="servicio-info">
-                        <span class="estado-badge"></span>
-                        <p class="texto-extra"></p>
+                        <span class="estado-badge estado-regular">Regular</span>
+                        <p class="texto-extra">Servicio estable. Próximo mantenimiento programado para el 28 de abril. Presión normal en la mayoría de los sectores.</p>
                     </div>
                 </div>
                 <div id="servicio-electricidad" class="servicio-estado">
                     <div class="servicio-header"><i class="fas fa-bolt"></i><h3>Electricidad</h3></div>
                     <div class="servicio-info">
-                        <span class="estado-badge"></span>
-                        <p class="texto-extra"></p>
+                        <span class="estado-badge estado-bueno">Bueno</span>
+                        <p class="texto-extra">Servicio funcionando correctamente. Nuevas luminarias LED instaladas recientemente en calles principales.</p>
                     </div>
                 </div>
                 <div id="servicio-aseo" class="servicio-estado">
                     <div class="servicio-header"><i class="fas fa-trash-alt"></i><h3>Aseo Urbano</h3></div>
                     <div class="servicio-info">
-                        <span class="estado-badge"></span>
-                        <p class="texto-extra"></p>
+                        <span class="estado-badge estado-regular">Regular</span>
+                        <p class="texto-extra">Recolección los lunes, miércoles y viernes. Próxima jornada de limpieza comunitaria el 30 de abril.</p>
                     </div>
                 </div>
                 <div id="servicio-internet" class="servicio-estado">
                     <div class="servicio-header"><i class="fas fa-wifi"></i><h3>Internet</h3></div>
                     <div class="servicio-info">
-                        <span class="estado-badge"></span>
-                        <p class="texto-extra"></p>
+                        <span class="estado-badge estado-malo">Malo</span>
+                        <p class="texto-extra">Intermitencias frecuentes debido a problemas en la infraestructura regional. Gestión en proceso con proveedores.</p>
                     </div>
                 </div>
             </div>
@@ -55,7 +55,70 @@
             <!-- Historial de gestiones -->
             <section style="margin: 3rem 0;">
                 <h2>Gestiones Recientes</h2>
-                <div id="gestiones-lista"></div>
+                <div id="gestiones-lista" class="gestiones-lista">
+                    <div class="gestion-item">
+                        <div class="gestion-fecha">
+                            <i class="far fa-calendar-alt"></i> 20 ABR 2026
+                        </div>
+                        <div class="gestion-contenido">
+                            <h4>Solicitud de asfaltado de Calle 2</h4>
+                            <p>Presentada solicitud formal ante la alcaldía municipal. Esperamos respuesta en 30 días.</p>
+                        </div>
+                    </div>
+                    <div class="gestion-item">
+                        <div class="gestion-fecha">
+                            <i class="far fa-calendar-alt"></i> 15 ABR 2026
+                        </div>
+                        <div class="gestion-contenido">
+                            <h4>Instalación de nuevas luminarias</h4>
+                            <p>Se instalaron 20 nuevas luminarias LED en calles principales. Proyecto completado exitosamente.</p>
+                        </div>
+                    </div>
+                    <div class="gestion-item">
+                        <div class="gestion-fecha">
+                            <i class="far fa-calendar-alt"></i> 10 ABR 2026
+                        </div>
+                        <div class="gestion-contenido">
+                            <h4>Jornada de vacunación comunitaria</h4>
+                            <p>Coordinada con centro de salud local. Más de 150 personas atendidas.</p>
+                        </div>
+                    </div>
+                    <div class="gestion-item">
+                        <div class="gestion-fecha">
+                            <i class="far fa-calendar-alt"></i> 5 ABR 2026
+                        </div>
+                        <div class="gestion-contenido">
+                            <h4>Reparación de bomba de agua</h4>
+                            <p>Gestionada reparación de bomba principal. Servicio de agua restablecido en 48 horas.</p>
+                        </div>
+                    </div>
+                    <div class="gestion-item">
+                        <div class="gestion-fecha">
+                            <i class="far fa-calendar-alt"></i> 1 ABR 2026
+                        </div>
+                        <div class="gestion-contenido">
+                            <h4>Mejoramiento del servicio de internet</h4>
+                            <p>Iniciadas gestiones con proveedores para mejorar la estabilidad de la conexión.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Información de contacto para reportes -->
+            <section style="margin: 3rem 0; text-align: center; background: var(--color-gris-claro); padding: 2rem; border-radius: 10px;">
+                <h3>¿Problemas con los servicios?</h3>
+                <p>Reporta cualquier inconveniente al Consejo Comunal</p>
+                <div style="display: flex; justify-content: center; gap: 2rem; margin-top: 1rem;">
+                    <div>
+                        <i class="fas fa-phone" style="color: var(--color-azul);"></i>
+                        <p><strong>0293-123-4567</strong></p>
+                    </div>
+                    <div>
+                        <i class="fab fa-whatsapp" style="color: var(--color-verde);"></i>
+                        <p><strong>0414-123-4567</strong></p>
+                    </div>
+                </div>
+                <a href="reportes.html" style="display: inline-block; margin-top: 1rem; background: var(--color-rojo); color: white; padding: 0.8rem 2rem; border-radius: 50px; text-decoration: none; font-weight: 600;">Reportar Problema</a>
             </section>
         </div>
     </main>
@@ -66,7 +129,6 @@
             </div>
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/main.js" defer></script>
 </body>
 </html>

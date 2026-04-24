@@ -14,8 +14,23 @@
 
     <main>
         <div class="container" style="max-width: 900px; margin: 2rem auto;">
-            <!-- Aquí se inyectará el contenido de la noticia desde main.js -->
+            <!-- Aquí se inyectará el contenido de la noticia desde el objeto JavaScript -->
             <div id="noticia-completa"></div>
+
+            <!-- Navegación entre noticias -->
+            <div class="navegacion-noticias">
+                <a href="articulos.html" class="btn-navegacion">
+                    <i class="fas fa-arrow-left"></i> Volver a todas las noticias
+                </a>
+                <div class="navegacion-flechas">
+                    <button id="noticia-anterior" class="btn-flecha">
+                        <i class="fas fa-chevron-left"></i> Anterior
+                    </button>
+                    <button id="noticia-siguiente" class="btn-flecha">
+                        Siguiente <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
 
             <!-- Botones para compartir -->
             <div class="compartir-noticia">
@@ -46,8 +61,204 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <script src="js/main.js"></script>
+    <!-- ==================== SCRIPTS ==================== -->
+    <script>
+        // Datos estáticos de las noticias - MODIFICAR AQUÍ PARA AGREGAR/EDITAR NOTICIAS
+        // INSTRUCCIONES PARA MODIFICAR:
+        // - Para agregar una noticia: copia un objeto completo y cambia id, titulo, categoria, fecha, resumen, imagen, contenido
+        // - Para editar: modifica los valores dentro de cada propiedad
+        // - Para eliminar: borra el objeto completo correspondiente
+        // - Las imágenes deben estar en la carpeta "imagenes/"
+        // - El contenido puede incluir HTML básico (p, ul, li, strong, em)
+        const noticias = [
+            {
+                id: 1,
+                titulo: "Corte de Agua Programado",
+                categoria: "Servicios Públicos",
+                fecha: "24 ABR 2026",
+                resumen: "Este viernes 28 de abril, de 8am a 4pm, mantenimiento de HIDROCARIBE. ¡Almacena agua!",
+                imagen: "imagenes/noticia-agua.jpg",
+                contenido: `
+                    <p><strong>Estimados vecinos de Villa Rosario:</strong></p>
+                    <p>Les informamos que este <strong>viernes 28 de abril de 2026</strong>, entre las <strong>8:00 AM y 4:00 PM</strong>, se realizará un mantenimiento programado en el sistema de distribución de agua potable por parte de HIDROCARIBE.</p>
+                    <p><strong>Recomendaciones importantes:</strong></p>
+                    <ul>
+                        <li>Almacene agua suficiente para el día en recipientes limpios</li>
+                        <li>Evite usar electrodomésticos que requieran agua durante el corte</li>
+                        <li>Si tiene pacientes con necesidades especiales, notifíquenos al Consejo Comunal</li>
+                    </ul>
+                    <p>El servicio se restablecerá de manera gradual una vez finalizado el mantenimiento. Disculpen las molestias que esto pueda causar.</p>
+                    <p><em>Consejo Comunal Villa Rosario</em></p>
+                `
+            },
+            {
+                id: 2,
+                titulo: "¡Asamblea General este sábado!",
+                categoria: "Asamblea",
+                fecha: "22 ABR 2026",
+                resumen: "10am en la Casa Comunal. Trataremos servicios públicos y presupuesto participativo. ¡Asiste!",
+                imagen: "imagenes/noticia-asamblea.jpg",
+                contenido: `
+                    <p><strong>Convocatoria a Asamblea General Ordinaria</strong></p>
+                    <p>El Consejo Comunal de Villa Rosario convoca a todos los vecinos a participar en la <strong>Asamblea General Ordinaria</strong> que se realizará este <strong>sábado 26 de abril de 2026 a las 10:00 AM</strong> en la Casa Comunal.</p>
+                    <p><strong>Agenda del día:</strong></p>
+                    <ol>
+                        <li>Informes de gestión del Consejo Comunal</li>
+                        <li>Estado actual de los servicios públicos (agua, electricidad, aseo)</li>
+                        <li>Presupuesto participativo 2026</li>
+                        <li>Proyectos de infraestructura comunitaria</li>
+                        <li>Elección de voceros sectoriales</li>
+                        <li>Varios</li>
+                    </ol>
+                    <p>La participación de todos los vecinos es fundamental para el desarrollo de nuestra comunidad. ¡Te esperamos!</p>
+                    <p><em>Consejo Comunal Villa Rosario</em></p>
+                `
+            },
+            {
+                id: 3,
+                titulo: "Jornada de Vacunación",
+                categoria: "Salud",
+                fecha: "20 ABR 2026",
+                resumen: "Este sábado en la Casa Comunal. Vacunas para niños y adultos. ¡Trae tu carnet!",
+                imagen: "imagenes/noticia-vacunacion.jpg",
+                contenido: `
+                    <p><strong>Jornada de Vacunación Comunitaria</strong></p>
+                    <p>En coordinación con el Centro de Salud de Altagracia, realizaremos una <strong>jornada de vacunación gratuita</strong> este <strong>sábado 26 de abril de 2026</strong> en la Casa Comunal de Villa Rosario.</p>
+                    <p><strong>Vacunas disponibles:</strong></p>
+                    <ul>
+                        <li>Esquema completo para niños menores de 5 años</li>
+                        <li>Refuerzos para adultos</li>
+                        <li>Vacuna contra la influenza estacional</li>
+                        <li>Vacuna contra el sarampión y rubéola</li>
+                    </ul>
+                    <p><strong>Requisitos:</strong></p>
+                    <ul>
+                        <li>Traer carnet de vacunación</li>
+                        <li>Cédula de identidad del niño/adulto</li>
+                        <li>Asistir con al menos un acompañante adulto</li>
+                    </ul>
+                    <p>El horario de atención será de 8:00 AM a 12:00 PM. No se requiere cita previa.</p>
+                    <p><em>Consejo Comunal Villa Rosario</em></p>
+                `
+            },
+            {
+                id: 4,
+                titulo: "Avances para el asfaltado",
+                categoria: "Infraestructura",
+                fecha: "18 ABR 2026",
+                resumen: "Solicitud formal presentada. Esperamos respuesta en 30 días. ¡Seguimos gestionando!",
+                imagen: "imagenes/noticia-asfaltado.jpg",
+                contenido: `
+                    <p><strong>Actualización sobre el Proyecto de Asfaltado</strong></p>
+                    <p>Después de múltiples gestiones realizadas por el Consejo Comunal, nos complace informar que se ha presentado la <strong>solicitud formal</strong> para el asfaltado de las calles principales de Villa Rosario ante la alcaldía municipal.</p>
+                    <p><strong>Detalles del proyecto:</strong></p>
+                    <ul>
+                        <li>Asfaltado de Calle 1 (desde la entrada hasta la plaza)</li>
+                        <li>Asfaltado de Calle 2 (tramo completo)</li>
+                        <li>Instalación de bordillos y cunetas</li>
+                        <li>Señalización vial básica</li>
+                    </ul>
+                    <p>La solicitud incluye el presupuesto estimado y el estudio técnico realizado por ingenieros municipales. Esperamos respuesta en un plazo máximo de 30 días hábiles.</p>
+                    <p>Continuaremos informando sobre cualquier avance en este importante proyecto para nuestra comunidad.</p>
+                    <p><em>Consejo Comunal Villa Rosario</em></p>
+                `
+            },
+            {
+                id: 5,
+                titulo: "Mejoras en el alumbrado",
+                categoria: "Servicios Públicos",
+                fecha: "15 ABR 2026",
+                resumen: "Se instalaron 20 nuevas luminarias en calles 1 y 2. ¡Más seguridad para todos!",
+                imagen: "imagenes/noticia-luminarias.jpg",
+                contenido: `
+                    <p><strong>Proyecto de Mejoramiento del Alumbrado Público Completado</strong></p>
+                    <p>Con gran satisfacción informamos que se ha completado la instalación de <strong>20 nuevas luminarias LED</strong> en las calles 1 y 2 de Villa Rosario, proyecto gestionado por el Consejo Comunal ante Corpoelec.</p>
+                    <p><strong>Beneficios del nuevo alumbrado:</strong></p>
+                    <ul>
+                        <li>Mayor iluminación y seguridad nocturna</li>
+                        <li>Ahorro energético significativo</li>
+                        <li>Menor mantenimiento requerido</li>
+                        <li>Mejor visibilidad para peatones y vehículos</li>
+                    </ul>
+                    <p>Este proyecto representa un avance importante en la seguridad de nuestra comunidad y demuestra que la gestión colectiva da resultados. Agradecemos a Corpoelec por su colaboración y a todos los vecinos por su paciencia durante las obras.</p>
+                    <p>Próximamente iniciaremos gestiones para extender este mejoramiento a otras calles del sector.</p>
+                    <p><em>Consejo Comunal Villa Rosario</em></p>
+                `
+            },
+            {
+                id: 6,
+                titulo: "Celebración del Día de la Mujer",
+                categoria: "Evento",
+                fecha: "10 ABR 2026",
+                resumen: "8 de marzo, actividades culturales y reconocimiento a las mujeres de la comunidad.",
+                imagen: "imagenes/noticia-mujeres.jpg",
+                contenido: `
+                    <p><strong>Celebración del Día Internacional de la Mujer</strong></p>
+                    <p>El Consejo Comunal de Villa Rosario, en conjunto con la organización de mujeres del sector, preparan una jornada especial para celebrar el <strong>Día Internacional de la Mujer</strong> el próximo <strong>8 de marzo de 2026</strong>.</p>
+                    <p><strong>Actividades programadas:</strong></p>
+                    <ul>
+                        <li>9:00 AM - Acto de reconocimiento a mujeres destacadas de la comunidad</li>
+                        <li>10:00 AM - Charla sobre derechos de la mujer</li>
+                        <li>11:00 AM - Actividades culturales y artísticas</li>
+                        <li>12:00 PM - Compartir comunitario</li>
+                    </ul>
+                    <p>Invitamos a todas las mujeres de Villa Rosario a participar activamente en esta celebración que busca reconocer su importante rol en el desarrollo de nuestra comunidad.</p>
+                    <p>¡Las mujeres de Villa Rosario hacen la diferencia cada día!</p>
+                    <p><em>Consejo Comunal Villa Rosario</em></p>
+                `
+            }
+        ];
+
+        // Función para mostrar la noticia
+        function mostrarNoticia(id) {
+            const noticia = noticias.find(n => n.id == id);
+            if (!noticia) {
+                document.getElementById('noticia-completa').innerHTML = '<p>Noticia no encontrada.</p>';
+                return;
+            }
+
+            const contenedor = document.getElementById('noticia-completa');
+            contenedor.innerHTML = `
+                <div class="noticia-completa-header">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                        <span class="noticia-categoria-badge">${noticia.categoria}</span>
+                        <span class="noticia-fecha">${noticia.fecha}</span>
+                    </div>
+                    <h1>${noticia.titulo}</h1>
+                    ${noticia.imagen ? `<img src="${noticia.imagen}" alt="${noticia.titulo}" class="noticia-imagen-destacada" loading="lazy">` : ''}
+                </div>
+                <div class="noticia-completa-contenido">
+                    ${noticia.contenido}
+                </div>
+            `;
+
+            // Actualizar título de la página
+            document.title = `${noticia.titulo} - Villa Rosario`;
+
+            // Configurar navegación
+            configurarNavegacion(id);
+        }
+
+        // Función para configurar navegación entre noticias
+        function configurarNavegacion(currentId) {
+            const anteriorBtn = document.getElementById('noticia-anterior');
+            const siguienteBtn = document.getElementById('noticia-siguiente');
+
+            const currentIndex = noticias.findIndex(n => n.id == currentId);
+            const prevIndex = currentIndex > 0 ? currentIndex - 1 : noticias.length - 1;
+            const nextIndex = currentIndex < noticias.length - 1 ? currentIndex + 1 : 0;
+
+            anteriorBtn.onclick = () => window.location.href = `noticia.html?id=${noticias[prevIndex].id}`;
+            siguienteBtn.onclick = () => window.location.href = `noticia.html?id=${noticias[nextIndex].id}`;
+        }
+
+        // Inicializar cuando se carga la página
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const id = urlParams.get('id') || 1;
+            mostrarNoticia(id);
+        });
+    </script>
+    <script src="js/main.js" defer></script>
 </body>
 </html>

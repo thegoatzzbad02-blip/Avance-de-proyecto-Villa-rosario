@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos - Villa Rosario</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- ==================== BARRA DE NAVEGACIÓN ==================== -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="imagenes/logo-villa-rosario.png" alt="Logo Villa Rosario" id="logo-img">
+                <div class="logo-text">
+                    <span class="logo-title">VILLA ROSARIO</span>
+                    <span class="logo-subtitle">Comunidad Organizada</span>
+                </div>
+            </a>
+
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <ul class="nav-menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                <li><a href="consejo-comunal.html"><i class="fas fa-users"></i> Consejo Comunal</a></li>
+                <li><a href="articulos.html"><i class="fas fa-newspaper"></i> Noticias</a></li>
+                <li><a href="servicios.html"><i class="fas fa-bolt"></i> Servicios</a></li>
+                <li><a href="reportes.html"><i class="fas fa-flag"></i> Reportar Problema</a></li>
+                <li><a href="emprendedores.html"><i class="fas fa-store"></i> Emprendedores</a></li>
+                <li><a href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ==================== ENCABEZADO ==================== -->
+    <header class="page-header" style="background: linear-gradient(135deg, var(--color-amarillo), var(--color-rojo));">
+        <div class="container">
+            <h1>Eventos Comunitarios</h1>
+            <p>Actividades y celebraciones en Villa Rosario</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="eventos-grid">
+                <!-- Evento 1 -->
+                <article class="evento-card">
+                    <div class="evento-imagen">
+                        <img src="imagenes/evento-vacunacion.jpg" alt="Jornada de Vacunación" loading="lazy">
+                        <div class="evento-fecha-badge">
+                            <span class="dia">26</span>
+                            <span class="mes">ABR</span>
+                        </div>
+                    </div>
+                    <div class="evento-contenido">
+                        <h3>Jornada de Vacunación</h3>
+                        <p class="evento-lugar"><i class="fas fa-map-marker-alt"></i> Casa Comunal Villa Rosario</p>
+                        <p class="evento-hora"><i class="far fa-clock"></i> 9:00 AM - 12:00 PM</p>
+                        <p class="evento-descripcion">Vacunas para niños y adultos contra enfermedades comunes. ¡Trae tu carnet de vacunación!</p>
+                        <div class="evento-organizador">
+                            <i class="fas fa-user-md"></i> Centro de Salud Altagracia
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Evento 2 -->
+                <article class="evento-card">
+                    <div class="evento-imagen">
+                        <img src="imagenes/evento-asamblea.jpg" alt="Asamblea General" loading="lazy">
+                        <div class="evento-fecha-badge">
+                            <span class="dia">3</span>
+                            <span class="mes">MAY</span>
+                        </div>
+                    </div>
+                    <div class="evento-contenido">
+                        <h3>Asamblea General</h3>
+                        <p class="evento-lugar"><i class="fas fa-map-marker-alt"></i> Casa Comunal Villa Rosario</p>
+                        <p class="evento-hora"><i class="far fa-clock"></i> 10:00 AM - 12:00 PM</p>
+                        <p class="evento-descripcion">Reunión mensual del Consejo Comunal. Discutiremos proyectos y presupuesto participativo.</p>
+                        <div class="evento-organizador">
+                            <i class="fas fa-users"></i> Consejo Comunal
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Evento 3 -->
+                <article class="evento-card">
+                    <div class="evento-imagen">
+                        <img src="imagenes/evento-madres.jpg" alt="Día de la Madre" loading="lazy">
+                        <div class="evento-fecha-badge">
+                            <span class="dia">11</span>
+                            <span class="mes">MAY</span>
+                        </div>
+                    </div>
+                    <div class="evento-contenido">
+                        <h3>Celebración Día de la Madre</h3>
+                        <p class="evento-lugar"><i class="fas fa-map-marker-alt"></i> Plaza Central</p>
+                        <p class="evento-hora"><i class="far fa-clock"></i> 3:00 PM - 6:00 PM</p>
+                        <p class="evento-descripcion">Actividades culturales y reconocimiento a las madres de la comunidad.</p>
+                        <div class="evento-organizador">
+                            <i class="fas fa-heart"></i> Organización de Mujeres
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Evento 4 -->
+                <article class="evento-card">
+                    <div class="evento-imagen">
+                        <img src="imagenes/evento-limpieza.jpg" alt="Jornada de Limpieza" loading="lazy">
+                        <div class="evento-fecha-badge">
+                            <span class="dia">18</span>
+                            <span class="mes">MAY</span>
+                        </div>
+                    </div>
+                    <div class="evento-contenido">
+                        <h3>Jornada de Limpieza Comunitaria</h3>
+                        <p class="evento-lugar"><i class="fas fa-map-marker-alt"></i> Todo el sector</p>
+                        <p class="evento-hora"><i class="far fa-clock"></i> 8:00 AM - 12:00 PM</p>
+                        <p class="evento-descripcion">Limpieza de espacios públicos, recolección de desechos y embellecimiento de la comunidad.</p>
+                        <div class="evento-organizador">
+                            <i class="fas fa-broom"></i> Consejo Comunal
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Mensaje para proponer eventos -->
+            <div style="text-align: center; margin: 4rem 0; padding: 2rem; background: var(--color-gris-claro); border-radius: 10px;">
+                <h3>¿Quieres proponer un evento?</h3>
+                <p>Si tienes una idea para un evento comunitario, contáctanos para evaluarlo y organizarlo juntos.</p>
+                <a href="contacto.html" style="display: inline-block; margin-top: 1rem; background: var(--color-amarillo); color: var(--color-azul); padding: 0.8rem 2rem; border-radius: 50px; text-decoration: none; font-weight: 600;">Proponer Evento</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Comunidad Villa Rosario</h3>
+                    <p>Sector Sabilar, Parroquia Altagracia</p>
+                    <p>Municipio Sucre, Estado Sucre</p>
+                    <p>Fundada en 2009</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Proyecto Universitario</h3>
+                    <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 1rem;">
+                        <img src="imagenes/logo-uptos.png" alt="UPTOS" style="height: 60px;">
+                        <img src="imagenes/logo-pnf.png" alt="PNF Informática" style="height: 60px;">
+                    </div>
+                    <p>Estudiantes de Informática<br>UPTOS "Clodosbaldo Russián"</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Conéctate</h3>
+                    <p><i class="fas fa-phone"></i> <strong>Teléfono:</strong> 0293-123-4567</p>
+                    <p><i class="fas fa-envelope"></i> <strong>Email:</strong> consejo@villarosario.gob.ve</p>
+                    <p><i class="fas fa-clock"></i> <strong>Horario:</strong> Lunes a Viernes 8am-4pm</p>
+                    <p>Únete al grupo oficial:</p>
+                    <a href="https://wa.me/584141234567?text=Hola,%20quisiera%20unirme%20al%20grupo%20de%20Villa%20Rosario" class="btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Unirse al grupo
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Comunidad Villa Rosario | Proyecto UPTOS - PNF Informática</p>
+                <p>Cumaná, Estado Sucre - Venezuela</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== SCRIPTS ==================== -->
+    <script src="js/main.js" defer></script>
+</body>
+</html>
