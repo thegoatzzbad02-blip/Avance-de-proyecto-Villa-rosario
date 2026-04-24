@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -7,8 +8,6 @@
     <link rel="stylesheet" href="css/estilo.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    <!-- Precarga de la hoja de estilos -->
-    <link rel="preload" href="css/estilo.css" as="style">
 </head>
 <body>
     <!-- Navegación (igual que en index) -->
@@ -49,23 +48,18 @@
         <div class="container">
             <!-- Contenedor dinámico para todas las noticias -->
             <div id="lista-noticias-completa" class="noticias-grid"></div>
-            <!-- Opcional: paginación, pero por ahora dejamos que se carguen todas -->
         </div>
     </main>
 
-    <!-- Footer corregido (faltaba <footer>) -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-bottom">
+   <div class="footer-bottom">
                 <p>&copy; 2024 Comunidad Villa Rosario. Proyecto UPTOS Clodosbaldo Russián.</p>
                 <p>Cumaná, Estado Sucre - República Bolivariana de Venezuela</p>
             </div>
         </div>
     </footer>
 
-    <!-- Scripts cargados de forma diferida (no bloquean la carga inicial) -->
-    <script defer src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <script defer src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
