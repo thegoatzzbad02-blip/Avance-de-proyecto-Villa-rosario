@@ -13,7 +13,7 @@
     <nav class="navbar">
         <div class="nav-container">
             <a href="index.html" class="logo">
-                <img src="imagenes/logo-villa-rosario.png" alt="Logo Villa Rosario" id="logo-img">
+                <img src="imagenes/logoVilla.png" alt="Logo Villa Rosario" id="logo-img">
                 <div class="logo-text">
                     <span class="logo-title">VILLA ROSARIO</span>
                     <span class="logo-subtitle">Comunidad Organizada</span>
@@ -31,7 +31,7 @@
                 <li><a href="servicios.html"><i class="fas fa-bolt"></i> Servicios</a></li>
                 <li><a href="reportes.html"><i class="fas fa-flag"></i> Reportar Problema</a></li>
                 <li><a href="emprendedores.html"><i class="fas fa-store"></i> Emprendedores</a></li>
-                <li><a href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a></li>
+                <li><a href="historia.html"><i class="fas fa-envelope"></i> Historia</a></li>
             </ul>
         </div>
     </nav>
@@ -64,9 +64,6 @@
     </header>
 
     <!-- ==================== ALERTAS COMUNITARIAS ==================== -->
-    <!-- PARA MODIFICAR LAS ALERTAS: Edita el contenido dentro de cada div class="alerta-item" -->
-    <!-- Cambia el tipo de alerta (urgente, info, evento) modificando la clase CSS (alerta-urgente, alerta-info, alerta-evento) -->
-    <!-- Actualiza la fecha, título y descripción según las necesidades actuales -->
     <section class="alertas">
         <div class="container">
             <h2><i class="fas fa-bullhorn"></i> Alertas Comunitarias</h2>
@@ -93,7 +90,7 @@
                         <span class="alerta-fecha"><i class="far fa-calendar"></i> 22 ABR 2026</span>
                     </div>
                 </div>
-                <!-- Alerta 3: Evento (amarillo) -->
+                <!-- Alerta 3: Evento (verde) -->
                 <div class="alerta-item alerta-evento">
                     <div class="alerta-icon">
                         <i class="fas fa-calendar-check"></i>
@@ -109,17 +106,14 @@
     </section>
 
     <!-- ==================== CARRUSEL DE IMÁGENES ==================== -->
-    <!-- PARA MODIFICAR EL CARRUSEL: Cambia las rutas de las imágenes en src="" y los textos en h3 y p -->
-    <!-- Para agregar más slides, copia la estructura de un div class="carrusel-slide" y actualiza los indicadores -->
     <section class="carrusel">
         <div class="container">
             <h2><i class="fas fa-images"></i> Galería Comunitaria</h2>
             <p class="section-subtitle">Momentos destacados de nuestra comunidad</p>
             <div class="carrusel-contenedor">
                 <div class="carrusel-slides">
-                    <!-- Las imágenes del carrusel son estáticas (pueden cambiarse manualmente) -->
                     <div class="carrusel-slide active">
-                        <img src="imagenes/carrusel1.jpg" alt="Asamblea comunitaria">
+                        <img src="imagenes/carrusel1.png" alt="Asamblea comunitaria">
                         <div class="carrusel-caption">
                             <h3>Asamblea General 2026</h3>
                             <p>Participación masiva de los vecinos</p>
@@ -165,7 +159,6 @@
             <h2>Últimas Noticias de la Comunidad</h2>
             <p class="section-subtitle">Información oficial del Consejo Comunal</p>
             <div id="lista-noticias-index" class="noticias-grid">
-                <!-- Noticia 1: Servicios Públicos -->
                 <article class="noticia-card" data-categoria="servicios">
                     <div class="noticia-header">
                         <span class="noticia-categoria"><i class="fas fa-tint"></i> AGUA</span>
@@ -179,7 +172,6 @@
                         <a href="noticia.html?id=1" class="btn-leer-mas">VER DETALLES <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </article>
-                <!-- Noticia 2: Asamblea -->
                 <article class="noticia-card" data-categoria="asamblea">
                     <div class="noticia-header">
                         <span class="noticia-categoria"><i class="fas fa-users"></i> ASAMBLEA</span>
@@ -193,7 +185,6 @@
                         <a href="noticia.html?id=2" class="btn-leer-mas">VER DETALLES <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </article>
-                <!-- Noticia 3: Salud -->
                 <article class="noticia-card" data-categoria="salud">
                     <div class="noticia-header">
                         <span class="noticia-categoria"><i class="fas fa-heartbeat"></i> SALUD</span>
@@ -214,26 +205,23 @@
         </div>
     </section>
 
-    <!-- ==================== EVENTOS ==================== -->
+    <!-- ==================== PRÓXIMOS EVENTOS ==================== -->
     <section class="eventos">
         <div class="container">
             <h2>Próximos Eventos</h2>
             <div id="lista-eventos-index" class="eventos-grid">
-                <!-- Evento 1 -->
                 <article class="evento-preview">
                     <h3>Jornada de Vacunación</h3>
                     <p class="fecha"><i class="far fa-calendar-alt"></i> Sábado 26 ABR 2026, 9:00 AM</p>
                     <p><i class="fas fa-map-marker-alt"></i> Casa Comunal Villa Rosario</p>
                     <p>Vacunas para niños y adultos contra enfermedades comunes. ¡Trae tu carnet de vacunación!</p>
                 </article>
-                <!-- Evento 2 -->
                 <article class="evento-preview">
                     <h3>Asamblea General</h3>
                     <p class="fecha"><i class="far fa-calendar-alt"></i> Sábado 3 MAY 2026, 10:00 AM</p>
                     <p><i class="fas fa-map-marker-alt"></i> Casa Comunal Villa Rosario</p>
                     <p>Reunión mensual del Consejo Comunal. Discutiremos proyectos y presupuesto participativo.</p>
                 </article>
-                <!-- Evento 3 -->
                 <article class="evento-preview">
                     <h3>Celebración Día de la Madre</h3>
                     <p class="fecha"><i class="far fa-calendar-alt"></i> Domingo 11 MAY 2026, 3:00 PM</p>
@@ -245,14 +233,11 @@
     </section>
 
     <!-- ==================== SERVICIOS PÚBLICOS ==================== -->
-    <!-- PARA MODIFICAR LOS SERVICIOS: Cambia el estado (estado-regular, estado-bueno, estado-malo) y el texto descriptivo -->
-    <!-- Los estados disponibles son: estado-bueno (verde), estado-regular (amarillo), estado-malo (rojo) -->
     <section class="servicios">
         <div class="container">
             <h2>Estado de Servicios Públicos</h2>
             <p class="section-subtitle">Información actualizada sobre servicios básicos</p>
             <div class="servicios-grid">
-                <!-- Servicio Agua -->
                 <div class="servicio-card" id="servicio-agua">
                     <div class="servicio-header">
                         <i class="fas fa-tint"></i>
@@ -263,7 +248,6 @@
                         <p class="texto-extra">Servicio estable. Próximo mantenimiento programado para el 28 de abril.</p>
                     </div>
                 </div>
-                <!-- Servicio Electricidad -->
                 <div class="servicio-card" id="servicio-electricidad">
                     <div class="servicio-header">
                         <i class="fas fa-bolt"></i>
@@ -274,7 +258,6 @@
                         <p class="texto-extra">Servicio funcionando correctamente. Nuevas luminarias instaladas recientemente.</p>
                     </div>
                 </div>
-                <!-- Servicio Aseo -->
                 <div class="servicio-card" id="servicio-aseo">
                     <div class="servicio-header">
                         <i class="fas fa-trash"></i>
@@ -285,7 +268,6 @@
                         <p class="texto-extra">Recolección los lunes, miércoles y viernes. Próxima jornada de limpieza el 30 de abril.</p>
                     </div>
                 </div>
-                <!-- Servicio Internet -->
                 <div class="servicio-card" id="servicio-internet">
                     <div class="servicio-header">
                         <i class="fas fa-wifi"></i>
@@ -303,81 +285,7 @@
         </div>
     </section>
 
-    <!-- ==================== EMPRENDEDORES DESTACADOS ==================== -->
-    <!-- PARA MODIFICAR EMPRENDEDORES: Cambia nombre, descripción, contacto e imagen -->
-    <!-- Para agregar más emprendedores, copia la estructura de un div class="emprendedor-card" -->
-    <!-- Para quitar emprendedores, elimina el div completo correspondiente -->
-    <section class="emprendedores">
-        <div class="container">
-            <h2>Emprendedores Locales</h2>
-            <p class="section-subtitle">Apoya el comercio de tu comunidad</p>
-            <div class="emprendedores-grid">
-                <!-- Emprendedor 1 -->
-                <div class="emprendedor-card">
-                    <div class="emprendedor-imagen">
-                        <img src="imagenes/emprendedor1.jpg" alt="María González - Panadería" loading="lazy">
-                    </div>
-                    <div class="emprendedor-info">
-                        <h3>María González</h3>
-                        <p class="emprendedor-descripcion">Panadera artesanal con más de 15 años de experiencia. Pan fresco diario y repostería tradicional.</p>
-                        <div class="emprendedor-contacto">
-                            <p><i class="fas fa-phone"></i> 0414-123-4567</p>
-                            <p><i class="fab fa-whatsapp"></i> 0414-123-4567</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Emprendedor 2 -->
-                <div class="emprendedor-card">
-                    <div class="emprendedor-imagen">
-                        <img src="imagenes/emprendedor2.jpg" alt="José Martínez - Ferretería" loading="lazy">
-                    </div>
-                    <div class="emprendedor-info">
-                        <h3>José Martínez</h3>
-                        <p class="emprendedor-descripcion">Ferretería completa con materiales de construcción, herramientas y asesoría técnica.</p>
-                        <div class="emprendedor-contacto">
-                            <p><i class="fas fa-phone"></i> 0412-987-6543</p>
-                            <p><i class="fab fa-facebook"></i> Ferretería José</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Emprendedor 3 -->
-                <div class="emprendedor-card">
-                    <div class="emprendedor-imagen">
-                        <img src="imagenes/emprendedor3.jpg" alt="Ana López - Peluquería" loading="lazy">
-                    </div>
-                    <div class="emprendedor-info">
-                        <h3>Ana López</h3>
-                        <p class="emprendedor-descripcion">Peluquería y estética. Cortes, tintes, manicura y tratamientos capilares.</p>
-                        <div class="emprendedor-contacto">
-                            <p><i class="fas fa-phone"></i> 0416-555-1234</p>
-                            <p><i class="fab fa-instagram"></i> @peluqueria_ana</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Emprendedor 4 -->
-                <div class="emprendedor-card">
-                    <div class="emprendedor-imagen">
-                        <img src="imagenes/emprendedor4.jpg" alt="Carlos Rodríguez - Cafetería" loading="lazy">
-                    </div>
-                    <div class="emprendedor-info">
-                        <h3>Carlos Rodríguez</h3>
-                        <p class="emprendedor-descripcion">Cafetería con café de la región, jugos naturales y comidas rápidas.</p>
-                        <div class="emprendedor-contacto">
-                            <p><i class="fas fa-phone"></i> 0424-777-8888</p>
-                            <p><i class="fab fa-whatsapp"></i> 0424-777-8888</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="text-center">
-                <a href="emprendedores.html" class="btn-ver-todas">Ver todos los emprendedores</a>
-            </div>
-        </div>
-    </section>
-
     <!-- ==================== GESTIONES RECIENTES ==================== -->
-    <!-- PARA MODIFICAR GESTIONES: Agrega nuevas entradas copiando la estructura de div class="gestion-item" -->
-    <!-- Actualiza fechas, títulos y descripciones según las gestiones realizadas -->
     <section class="gestiones">
         <div class="container">
             <h2>Gestiones Recientes</h2>
@@ -423,41 +331,7 @@
         </div>
     </section>
 
-    <!-- ==================== PROYECTO UPTOS ==================== -->
-    <section class="proyecto-uptos">
-        <div class="container">
-            <div class="proyecto-content">
-                <div class="proyecto-info">
-                    <h2>Proyecto Universitario UPTOS</h2>
-                    <p>Esta plataforma web es parte del proyecto de investigación:</p>
-                    <p class="proyecto-titulo">"Implementación de una plataforma web informativa que sirva como medio alternativo de comunicación para los habitantes de la comunidad de Villa Rosario"</p>
-                    <div class="proyecto-datos">
-                        <h3>Estudiantes Investigadores:</h3>
-                        <ul>
-                            <li>Diego David Acuña Chacón C.I 32123210</li>
-                            <li>Samuel Enrique Maestre Marcano C.I 33683225</li>
-                            <li>Darío Rafael Mendoza Millán C.I 32449201</li>
-                            <li>Robert Jesús Mundaray Rincones C.I 32746996</li>
-                        </ul>
-                        <h3>Profesores Asesores:</h3>
-                        <p>Rosiris Álvarez</p>
-                        <p>Raúl Canelón</p>
-                    </div>
-                </div>
-                <div class="proyecto-logos">
-                    <div class="logo-institucion">
-                        <h4>Universidad Politécnica Territorial del Oeste de Sucre</h4>
-                        <p>"Clodosbaldo Russián"</p>
-                    </div>
-                    <div class="logo-institucion">
-                        <h4>Programa Nacional de Formación en Informática</h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==================== FOOTER ==================== -->
+    <!-- ==================== FOOTER (SIMPLIFICADO, SIN PROYECTO UPTOS) ==================== -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
@@ -473,20 +347,15 @@
                     </div>
                 </div>
                 <div class="footer-col">
-                    <h3>Proyecto Universitario</h3>
-                    <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 1rem;">
-                        <img src="imagenes/logo-uptos.png" alt="UPTOS" style="height: 60px;">
-                        <img src="imagenes/logo-pnf.png" alt="PNF Informática" style="height: 60px;">
-                    </div>
-                    <p>Estudiantes de Informática<br>UPTOS "Clodosbaldo Russián"</p>
-                </div>
-                <div class="footer-col">
-                    <h3>Conéctate</h3>
+                    <h3>Contacto</h3>
                     <p><i class="fas fa-phone"></i> <strong>Teléfono:</strong> 0293-123-4567</p>
                     <p><i class="fas fa-envelope"></i> <strong>Email:</strong> consejo@villarosario.gob.ve</p>
                     <p><i class="fas fa-clock"></i> <strong>Horario:</strong> Lunes a Viernes 8am-4pm</p>
-                    <p>Únete al grupo oficial:</p>
-                    <a href="https://wa.me/584141234567?text=Hola,%20quisiera%20unirme%20al%20grupo%20de%20Villa%20Rosario" id="whatsapp-group-link" class="btn-whatsapp" target="_blank">
+                </div>
+                <div class="footer-col">
+                    <h3>Conéctate</h3>
+                    <p>Únete al grupo oficial de WhatsApp:</p>
+                    <a href="https://wa.me/584141234567?text=Hola,%20quisiera%20unirme%20al%20grupo%20de%20Villa%20Rosario" class="btn-whatsapp" target="_blank">
                         <i class="fab fa-whatsapp"></i> Unirse al grupo
                     </a>
                     <div class="qr-code">
@@ -496,7 +365,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Comunidad Villa Rosario | Proyecto UPTOS - PNF Informática</p>
+                <p>&copy; 2026 Comunidad Villa Rosario | Desarrollado por estudiantes de Informática - UPTOS</p>
                 <p>Cumaná, Estado Sucre - Venezuela</p>
             </div>
         </div>
