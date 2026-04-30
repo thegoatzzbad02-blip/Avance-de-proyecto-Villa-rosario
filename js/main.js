@@ -180,3 +180,48 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+// =============================================
+// FUNCIONALIDAD PARA LA PÁGINA DE EVENTOS
+// =============================================
+
+document.addEventListener('DOMContentLoaded', function() {
+    // --- Filtrado por mes (o por categoría) ---
+    const filtros = document.querySelectorAll('.filtro-btn');
+    const eventos = document.querySelectorAll('.evento-card-moderno');
+
+    if (filtros.length && eventos.length) {
+        filtros.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filtros.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const mesFiltro = btn.getAttribute('data-mes');
+                eventos.forEach(evento => {
+                    const mesEvento = evento.getAttribute('data-mes');
+                    if (mesFiltro === 'todos' || mesEvento === mesFiltro) {
+                        evento.style.display = 'flex';
+                    } else {
+                        evento.style.display = 'none';
+                    }
+                });
+            });
+        });
+    }
+
+    // --- Botones "Me interesa" (muestra un toast) ---
+    const botonesInteres = document.querySelectorAll('.btn-interesado');
+    const toast = document.getElementById('toastMensaje');
+
+    if (botonesInteres.length && toast) {
+        botonesInteres.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const eventoNombre = btn.getAttribute('data-evento') || 'este evento';
+                // Mostrar notificación
+                toast.textContent = `✅ ¡Gracias! Te avisaremos sobre "${eventoNombre}"`;
+                toast.classList.add('mostrar');
+                setTimeout(() => {
+                    toast.classList.remove('mostrar');
+                }, 3000);
+            });
+        });
+    }
+});

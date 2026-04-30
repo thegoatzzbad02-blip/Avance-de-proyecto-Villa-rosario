@@ -3,142 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eventos - Villa Rosario</title>
+    <title>Eventos Comunitarios - Villa Rosario</title>
     <link rel="stylesheet" href="css/estilo.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-   <!-- ==================== BARRA DE NAVEGACIÓN ==================== -->
+    <!-- ==================== NAVEGACIÓN ==================== -->
     <nav class="navbar">
         <div class="nav-container">
             <a href="index.html" class="logo">
-                <img src="imagenes/logoVilla.png" alt="Logo Villa Rosario" id="logo-img">
+                <img src="imagenes/logo-villa-rosario.png" alt="Logo Villa Rosario" id="logo-img">
                 <div class="logo-text">
                     <span class="logo-title">VILLA ROSARIO</span>
                     <span class="logo-subtitle">Comunidad Organizada</span>
                 </div>
             </a>
-            
             <input type="checkbox" id="menu-toggle" class="menu-toggle">
             <label for="menu-toggle" class="menu-btn">
                 <i class="fas fa-bars"></i>
             </label>
             <ul class="nav-menu">
-                <li><a href="index.html" class="active"><i class="fas fa-home"></i> Inicio</a></li>
+                <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
                 <li><a href="consejo-comunal.html"><i class="fas fa-users"></i> Consejo Comunal</a></li>
                 <li><a href="articulos.html"><i class="fas fa-newspaper"></i> Noticias</a></li>
+                <li><a href="eventos.html" class="active"><i class="fas fa-calendar-alt"></i> Eventos</a></li>
+                <li><a href="proyectos.html"><i class="fas fa-rocket"></i> Proyectos</a></li>
                 <li><a href="servicios.html"><i class="fas fa-bolt"></i> Servicios</a></li>
-                <li><a href="proyectos.html"><i class="fas fa-flag"></i> Proyectos</a></li>
                 <li><a href="emprendedores.html"><i class="fas fa-store"></i> Emprendedores</a></li>
-                <li><a href="historia.html"><i class="fas fa-envelope"></i> Historia</a></li>
-                <li><a href="eventos.html"><i class="fas fa-envelope"></i> Eventos</a></li>
+                <li><a href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- ==================== ENCABEZADO ==================== -->
-    <header class="page-header" style="background: linear-gradient(135deg, var(--color-amarillo), var(--color-rojo));">
+    <header class="page-header" style="background: linear-gradient(135deg, var(--color-verde), #1E8449);">
         <div class="container">
-            <h1>Eventos Comunitarios</h1>
-            <p>Actividades y celebraciones en Villa Rosario</p>
+            <h1>📅 Eventos Comunitarios</h1>
+            <p>Actividades, reuniones y celebraciones en Villa Rosario</p>
         </div>
     </header>
 
     <main>
         <div class="container">
-            <div class="eventos-grid">
-                <!-- Evento 1 -->
-                <article class="evento-card">
-                    <div class="evento-imagen">
-                        <img src="imagenes/evento-vacunacion.jpg" alt="Jornada de Vacunación" loading="lazy">
-                        <div class="evento-fecha-badge">
-                            <span class="dia">26</span>
-                            <span class="mes">ABR</span>
-                        </div>
-                    </div>
-                    <div class="evento-contenido">
-                        <h3>Jornada de Vacunación</h3>
-                        <p class="evento-lugar"><i class="fas fa-map-marker-alt"></i> Casa Comunal Villa Rosario</p>
-                        <p class="evento-hora"><i class="far fa-clock"></i> 9:00 AM - 12:00 PM</p>
-                        <p class="evento-descripcion">Vacunas para niños y adultos contra enfermedades comunes. ¡Trae tu carnet de vacunación!</p>
-                        <div class="evento-organizador">
-                            <i class="fas fa-user-md"></i> Centro de Salud Altagracia
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Evento 2 -->
-                <article class="evento-card">
-                    <div class="evento-imagen">
-                        <img src="imagenes/evento-asamblea.jpg" alt="Asamblea General" loading="lazy">
-                        <div class="evento-fecha-badge">
-                            <span class="dia">3</span>
-                            <span class="mes">MAY</span>
-                        </div>
-                    </div>
-                    <div class="evento-contenido">
-                        <h3>Asamblea General</h3>
-                        <p class="evento-lugar"><i class="fas fa-map-marker-alt"></i> Casa Comunal Villa Rosario</p>
-                        <p class="evento-hora"><i class="far fa-clock"></i> 10:00 AM - 12:00 PM</p>
-                        <p class="evento-descripcion">Reunión mensual del Consejo Comunal. Discutiremos proyectos y presupuesto participativo.</p>
-                        <div class="evento-organizador">
-                            <i class="fas fa-users"></i> Consejo Comunal
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Evento 3 -->
-                <article class="evento-card">
-                    <div class="evento-imagen">
-                        <img src="imagenes/evento-madres.jpg" alt="Día de la Madre" loading="lazy">
-                        <div class="evento-fecha-badge">
-                            <span class="dia">11</span>
-                            <span class="mes">MAY</span>
-                        </div>
-                    </div>
-                    <div class="evento-contenido">
-                        <h3>Celebración Día de la Madre</h3>
-                        <p class="evento-lugar"><i class="fas fa-map-marker-alt"></i> Plaza Central</p>
-                        <p class="evento-hora"><i class="far fa-clock"></i> 3:00 PM - 6:00 PM</p>
-                        <p class="evento-descripcion">Actividades culturales y reconocimiento a las madres de la comunidad.</p>
-                        <div class="evento-organizador">
-                            <i class="fas fa-heart"></i> Organización de Mujeres
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Evento 4 -->
-                <article class="evento-card">
-                    <div class="evento-imagen">
-                        <img src="imagenes/evento-limpieza.jpg" alt="Jornada de Limpieza" loading="lazy">
-                        <div class="evento-fecha-badge">
-                            <span class="dia">18</span>
-                            <span class="mes">MAY</span>
-                        </div>
-                    </div>
-                    <div class="evento-contenido">
-                        <h3>Jornada de Limpieza Comunitaria</h3>
-                        <p class="evento-lugar"><i class="fas fa-map-marker-alt"></i> Todo el sector</p>
-                        <p class="evento-hora"><i class="far fa-clock"></i> 8:00 AM - 12:00 PM</p>
-                        <p class="evento-descripcion">Limpieza de espacios públicos, recolección de desechos y embellecimiento de la comunidad.</p>
-                        <div class="evento-organizador">
-                            <i class="fas fa-broom"></i> Consejo Comunal
-                        </div>
-                    </div>
-                </article>
+            <!-- Filtros rápidos (opcional) -->
+            <div class="eventos-filtros">
+                <button class="filtro-btn active" data-mes="todos">📋 Todos</button>
+                <button class="filtro-btn" data-mes="abril">🌸 Abril</button>
+                <button class="filtro-btn" data-mes="mayo">🌼 Mayo</button>
             </div>
 
-            <!-- Mensaje para proponer eventos -->
-            <div style="text-align: center; margin: 4rem 0; padding: 2rem; background: var(--color-gris-claro); border-radius: 10px;">
-                <h3>¿Quieres proponer un evento?</h3>
-                <p>Si tienes una idea para un evento comunitario, contáctanos para evaluarlo y organizarlo juntos.</p>
-                <a href="contacto.html" style="display: inline-block; margin-top: 1rem; background: var(--color-amarillo); color: var(--color-azul); padding: 0.8rem 2rem; border-radius: 50px; text-decoration: none; font-weight: 600;">Proponer Evento</a>
+            <!-- Grid de eventos mejorado -->
+            <div class="eventos-grid-moderno">
+                <!-- Evento 1: Jornada de Vacunación (Abril) -->
+                <div class="evento-card-moderno" data-mes="abril">
+                    <div class="evento-fecha-destacada">
+                        <span class="dia">26</span>
+                        <span class="mes">ABR</span>
+                    </div>
+                    <div class="evento-contenido">
+                        <h3>💉 Jornada de Vacunación</h3>
+                        <div class="evento-info">
+                            <p><i class="fas fa-clock"></i> 9:00 AM - 12:00 PM</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Casa Comunal Villa Rosario</p>
+                            <p><i class="fas fa-stethoscope"></i> Vacunas para niños y adultos contra enfermedades comunes. ¡Trae tu carnet de vacunación!</p>
+                            <p class="organizador"><i class="fas fa-user-md"></i> Centro de Salud Altagracia</p>
+                        </div>
+                        <button class="btn-interesado" data-evento="Jornada de Vacunación">📢 Me interesa</button>
+                    </div>
+                </div>
+
+                <!-- Evento 2: Asamblea General (Mayo) -->
+                <div class="evento-card-moderno" data-mes="mayo">
+                    <div class="evento-fecha-destacada">
+                        <span class="dia">3</span>
+                        <span class="mes">MAY</span>
+                    </div>
+                    <div class="evento-contenido">
+                        <h3>🗣️ Asamblea General</h3>
+                        <div class="evento-info">
+                            <p><i class="fas fa-clock"></i> 10:00 AM - 12:00 PM</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Casa Comunal Villa Rosario</p>
+                            <p><i class="fas fa-chalkboard-user"></i> Reunión mensual del Consejo Comunal. Discutiremos proyectos y presupuesto participativo.</p>
+                            <p class="organizador"><i class="fas fa-users"></i> Consejo Comunal</p>
+                        </div>
+                        <button class="btn-interesado" data-evento="Asamblea General">📢 Me interesa</button>
+                    </div>
+                </div>
+
+                <!-- Evento 3: Celebración Día de la Madre (Mayo) -->
+                <div class="evento-card-moderno" data-mes="mayo">
+                    <div class="evento-fecha-destacada">
+                        <span class="dia">11</span>
+                        <span class="mes">MAY</span>
+                    </div>
+                    <div class="evento-contenido">
+                        <h3>🎉 Celebración Día de la Madre</h3>
+                        <div class="evento-info">
+                            <p><i class="fas fa-clock"></i> 3:00 PM - 6:00 PM</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Plaza Central</p>
+                            <p><i class="fas fa-music"></i> Actividades culturales y reconocimiento a las madres de la comunidad.</p>
+                            <p class="organizador"><i class="fas fa-female"></i> Organización de Mujeres</p>
+                        </div>
+                        <button class="btn-interesado" data-evento="Celebración Día de la Madre">📢 Me interesa</button>
+                    </div>
+                </div>
+
+                <!-- Evento 4: Jornada de Limpieza (Abril) - nuevo -->
+                <div class="evento-card-moderno" data-mes="abril">
+                    <div class="evento-fecha-destacada">
+                        <span class="dia">19</span>
+                        <span class="mes">ABR</span>
+                    </div>
+                    <div class="evento-contenido">
+                        <h3>🧹 Jornada de Limpieza</h3>
+                        <div class="evento-info">
+                            <p><i class="fas fa-clock"></i> 8:00 AM - 12:00 PM</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Calles 1, 2 y 3</p>
+                            <p><i class="fas fa-recycle"></i> Recogida de desechos, limpieza de canales y embellecimiento de áreas comunes.</p>
+                            <p class="organizador"><i class="fas fa-leaf"></i> Comité de Ambiente</p>
+                        </div>
+                        <button class="btn-interesado" data-evento="Jornada de Limpieza">📢 Me interesa</button>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
 
-    <!-- ==================== FOOTER ==================== -->
+    <!-- ==================== FOOTER ==================== (igual que en las demás páginas) -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
@@ -166,7 +158,6 @@
                     <p><i class="fas fa-phone"></i> <strong>Teléfono:</strong> 0293-123-4567</p>
                     <p><i class="fas fa-envelope"></i> <strong>Email:</strong> consejo@villarosario.gob.ve</p>
                     <p><i class="fas fa-clock"></i> <strong>Horario:</strong> Lunes a Viernes 8am-4pm</p>
-                    <p>Únete al grupo oficial:</p>
                     <a href="https://wa.me/584141234567?text=Hola,%20quisiera%20unirme%20al%20grupo%20de%20Villa%20Rosario" class="btn-whatsapp" target="_blank">
                         <i class="fab fa-whatsapp"></i> Unirse al grupo
                     </a>
@@ -179,7 +170,9 @@
         </div>
     </footer>
 
-    <!-- ==================== SCRIPTS ==================== -->
+    <!-- ==================== TOAST NOTIFICACIÓN (opcional) ==================== -->
+    <div id="toastMensaje" class="toast-notificacion">¡Gracias por tu interés! Te avisaremos pronto.</div>
+
     <script src="js/main.js" defer></script>
 </body>
 </html>
