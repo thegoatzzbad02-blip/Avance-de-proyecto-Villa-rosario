@@ -107,3 +107,76 @@ document.addEventListener('DOMContentLoaded', () => {
     // Configurar botones de compartir
     setupShareButtons();
 });
+// =============================================
+// FUNCIONALIDAD PARA LA PÁGINA DE PROYECTOS
+// =============================================
+
+document.addEventListener('DOMContentLoaded', function() {
+    // --- Filtrado por pestañas (Todos / Activos / Futuros) ---
+    const tabs = document.querySelectorAll('.tab-btn');
+    const proyectos = document.querySelectorAll('.proyecto-card');
+
+    if (tabs.length && proyectos.length) {
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Cambiar clase activa en las pestañas
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+
+                const filter = tab.getAttribute('data-tab');
+                proyectos.forEach(proy => {
+                    const estado = proy.getAttribute('data-estado');
+                    if (filter === 'todos') {
+                        proy.style.display = 'flex';
+                    } else if (filter === 'activos' && estado === 'activo') {
+                        proy.style.display = 'flex';
+                    } else if (filter === 'futuros' && estado === 'futuro') {
+                        proy.style.display = 'flex';
+                    } else {
+                        proy.style.display = 'none';
+                    }
+                });
+            });
+        });
+    }
+
+    // --- Modal de detalles ---
+    const modal = document.getElementById('modalProyecto');
+    const modalDesc = document.getElementById('modalDescripcion');
+    const closeModal = document.querySelector('.cerrar-modal-proyecto');
+    const detallesBtns = document.querySelectorAll('.btn-detalles');
+
+    if (modal && modalDesc && detallesBtns.length) {
+        detallesBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const descripcion = btn.getAttribute('data-descripcion');
+                if (descripcion) {
+                    modalDesc.innerHTML = descripcion;
+                    modal.style.display = 'flex';
+                }
+            });
+        });
+
+        // Cerrar modal con el botón X
+        if (closeModal) {
+            closeModal.addEventListener('click', () => {
+                modal.style.display = 'none';
+            });
+        }
+
+        // Cerrar modal haciendo clic fuera del contenido
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+
+        // Cerrar con tecla ESC
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.style.display === 'flex') {
+                modal.style.display = 'none';
+            }
+        });
+    }
+});

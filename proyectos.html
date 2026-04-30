@@ -7,10 +7,9 @@
     <link rel="stylesheet" href="css/estilo.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    <!-- Los estilos específicos de proyectos están integrados en estilo.css (ver sección al final) -->
 </head>
 <body>
-    <!-- ==================== BARRA DE NAVEGACIÓN ==================== -->
+    <!-- ==================== NAVEGACIÓN ==================== -->
     <nav class="navbar">
         <div class="nav-container">
             <a href="index.html" class="logo">
@@ -37,7 +36,7 @@
         </div>
     </nav>
 
-    <!-- ==================== ENCABEZADO DE PÁGINA ==================== -->
+    <!-- ==================== ENCABEZADO ==================== -->
     <header class="page-header" style="background: linear-gradient(135deg, var(--color-azul), var(--color-rojo));">
         <div class="container">
             <h1>Proyectos Comunitarios</h1>
@@ -47,74 +46,74 @@
 
     <main>
         <div class="container">
-            <!-- SECCIÓN DE FILTROS (pestañas) -->
+            <!-- Pestañas de filtro -->
             <div class="proyectos-tabs">
                 <button class="tab-btn active" data-tab="todos">📋 Todos</button>
-                <button class="tab-btn" data-tab="activos">🚧 En Progreso</button>
-                <button class="tab-btn" data-tab="futuros">📅 Próximos Proyectos</button>
+                <button class="tab-btn" data-tab="activos">⚡ En Progreso</button>
+                <button class="tab-btn" data-tab="futuros">🔜 Próximos</button>
             </div>
 
-            <!-- GRID DE PROYECTOS (ejemplos) -->
-            <div id="proyectosGrid" class="proyectos-grid">
-                <!-- PROYECTO 1: Asfaltado (Activo) -->
+            <!-- Grid de proyectos (ejemplos realistas) -->
+            <div class="proyectos-grid">
+                <!-- Proyecto 1: Asfaltado (activo) -->
                 <div class="proyecto-card" data-estado="activo">
                     <div class="proyecto-imagen">
                         <img src="imagenes/proyecto-asfaltado.jpg" alt="Asfaltado de calles" loading="lazy">
                     </div>
                     <div class="proyecto-info">
-                        <span class="proyecto-estado estado-activo">🚧 En Progreso</span>
-                        <h3>Asfaltado de Calles</h3>
+                        <span class="proyecto-estado estado-activo">En Progreso</span>
+                        <h3>🛣️ Asfaltado de Calles</h3>
                         <p>Mejoramiento de las 4 calles principales con concreto asfáltico. Incluye drenajes y aceras.</p>
                         <div class="proyecto-acciones">
-                            <a href="#" class="btn-detalles" data-descripcion="<strong>📊 Avance:</strong> 60% de la Calle 1 completada. Se espera finalizar en junio 2026.<br><strong>💰 Presupuesto:</strong> 500.000 Bs.<br><strong>👥 Responsable:</strong> Comité de Infraestructura">Ver detalles</a>
+                            <button class="btn-detalles" data-descripcion="<strong>📈 Avance:</strong> 60% de la Calle 1 completada. Se espera finalizar en junio 2026.<br><strong>💰 Presupuesto:</strong> 500.000 Bs.<br><strong>👥 Responsable:</strong> Comité de Infraestructura">Ver detalles</button>
                             <a href="documentos/plan-asfaltado.pdf" class="btn-pdf" target="_blank"><i class="fas fa-file-pdf"></i> Plano PDF</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- PROYECTO 2: Luminarias LED (Activo) -->
+                <!-- Proyecto 2: Luminarias (activo) -->
                 <div class="proyecto-card" data-estado="activo">
                     <div class="proyecto-imagen">
                         <img src="imagenes/proyecto-luminarias.jpg" alt="Alumbrado público LED" loading="lazy">
                     </div>
                     <div class="proyecto-info">
-                        <span class="proyecto-estado estado-activo">🚧 En Progreso</span>
-                        <h3>Alumbrado Público LED</h3>
-                        <p>Instalación de 40 nuevas luminarias LED en calles y espacios comunes para mayor seguridad y ahorro energético.</p>
+                        <span class="proyecto-estado estado-activo">En Progreso</span>
+                        <h3>💡 Alumbrado Público LED</h3>
+                        <p>Instalación de 40 nuevas luminarias LED en calles y espacios comunes para mayor seguridad.</p>
                         <div class="proyecto-acciones">
-                            <a href="#" class="btn-detalles" data-descripcion="<strong>📊 Avance:</strong> Instaladas 25 luminarias (62.5%).<br><strong>💡 Beneficio:</strong> Reducción del consumo eléctrico en 40%.<br><strong>📍 Próxima etapa:</strong> Calle 4 y plazoleta central.">Ver detalles</a>
+                            <button class="btn-detalles" data-descripcion="<strong>📈 Avance:</strong> Instaladas 25 luminarias (62.5%).<br><strong>⚡ Beneficio:</strong> Reducción del consumo eléctrico en 40%.<br><strong>📍 Próxima etapa:</strong> Calle 4.">Ver detalles</button>
                             <a href="documentos/pliego-luminarias.pdf" class="btn-pdf" target="_blank"><i class="fas fa-file-pdf"></i> Especificaciones</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- PROYECTO 3: Ampliación Casa Comunal (Futuro) -->
+                <!-- Proyecto 3: Ampliación Casa Comunal (futuro) -->
                 <div class="proyecto-card" data-estado="futuro">
                     <div class="proyecto-imagen">
                         <img src="imagenes/proyecto-casa-comunal.jpg" alt="Ampliación Casa Comunal" loading="lazy">
                     </div>
                     <div class="proyecto-info">
-                        <span class="proyecto-estado estado-futuro">📅 Próximo</span>
-                        <h3>Ampliación Casa Comunal</h3>
-                        <p>Construcción de un segundo piso para sala de reuniones, área de informática comunitaria y archivo.</p>
+                        <span class="proyecto-estado estado-futuro">Próximo</span>
+                        <h3>🏠 Ampliación Casa Comunal</h3>
+                        <p>Construcción de un segundo piso para sala de reuniones y área de informática comunitaria.</p>
                         <div class="proyecto-acciones">
-                            <a href="#" class="btn-detalles" data-descripcion="<strong>📅 Inicio previsto:</strong> Julio 2026.<br><strong>⏱️ Duración:</strong> 4 meses.<br><strong>💰 Presupuesto:</strong> En gestión con alcaldía y gobernación.">Ver detalles</a>
+                            <button class="btn-detalles" data-descripcion="<strong>📅 Inicio previsto:</strong> Julio 2026.<br><strong>⏱️ Duración:</strong> 4 meses.<br><strong>💰 Presupuesto:</strong> En gestión con alcaldía.">Ver detalles</button>
                             <a href="documentos/anteproyecto-casa-comunal.pdf" class="btn-pdf" target="_blank"><i class="fas fa-file-pdf"></i> Anteproyecto</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- PROYECTO 4: Recuperación de Áreas Verdes (Futuro) -->
+                <!-- Proyecto 4: Áreas Verdes (futuro) -->
                 <div class="proyecto-card" data-estado="futuro">
                     <div class="proyecto-imagen">
-                        <img src="imagenes/proyecto-areas-verdes.jpg" alt="Recuperación de áreas verdes" loading="lazy">
+                        <img src="imagenes/proyecto-areas-verdes.jpg" alt="Recuperación áreas verdes" loading="lazy">
                     </div>
                     <div class="proyecto-info">
-                        <span class="proyecto-estado estado-futuro">📅 Próximo</span>
-                        <h3>Recuperación de Áreas Verdes</h3>
-                        <p>Embellecimiento del Parque Central y zonas recreativas. Incluye jardinería, juegos infantiles y gimnasio al aire libre.</p>
+                        <span class="proyecto-estado estado-futuro">Próximo</span>
+                        <h3>🌳 Recuperación de Áreas Verdes</h3>
+                        <p>Embelecimiento del Parque Central y zonas recreativas. Jardinería, juegos infantiles y gimnasio al aire libre.</p>
                         <div class="proyecto-acciones">
-                            <a href="#" class="btn-detalles" data-descripcion="<strong>🤝 Colaboradores:</strong> Misión Árbol, Alcaldía, Voluntarios.<br><strong>📅 Fecha estimada:</strong> Septiembre 2026.<br><strong>🗳️ Presupuesto participativo:</strong> Sí (aprobado en asamblea).">Ver detalles</a>
+                            <button class="btn-detalles" data-descripcion="<strong>🤝 Colaboradores:</strong> Misión Árbol, Alcaldía.<br><strong>📅 Fecha estimada:</strong> Septiembre 2026.<br><strong>🗳️ Presupuesto participativo:</strong> Sí.">Ver detalles</button>
                             <a href="documentos/diseno-parque.pdf" class="btn-pdf" target="_blank"><i class="fas fa-file-pdf"></i> Diseño</a>
                         </div>
                     </div>
@@ -122,15 +121,6 @@
             </div>
         </div>
     </main>
-
-    <!-- ==================== MODAL PARA DETALLES DEL PROYECTO ==================== -->
-    <div id="modalProyecto" class="modal-proyecto">
-        <div class="modal-proyecto-content">
-            <span class="cerrar-modal-proyecto">&times;</span>
-            <h3>📌 Detalles del Proyecto</h3>
-            <div id="modalDescripcion"></div>
-        </div>
-    </div>
 
     <!-- ==================== FOOTER ==================== -->
     <footer class="footer">
@@ -172,68 +162,15 @@
         </div>
     </footer>
 
-    <!-- ==================== SCRIPT ==================== -->
-    <script>
-        // ===== FILTRADO POR PESTAÑAS (TODOS / ACTIVOS / FUTUROS) =====
-        const tabs = document.querySelectorAll('.tab-btn');
-        const proyectos = document.querySelectorAll('.proyecto-card');
+    <!-- ==================== MODAL PARA DETALLES ==================== -->
+    <div id="modalProyecto" class="modal-proyecto">
+        <div class="modal-proyecto-content">
+            <span class="cerrar-modal-proyecto">&times;</span>
+            <h3>🔍 Detalles del Proyecto</h3>
+            <div id="modalDescripcion"></div>
+        </div>
+    </div>
 
-        tabs.forEach(tab => {
-            tab.addEventListener('click', () => {
-                // Remover clase active de todas las pestañas
-                tabs.forEach(t => t.classList.remove('active'));
-                tab.classList.add('active');
-                
-                const filter = tab.getAttribute('data-tab');
-                
-                proyectos.forEach(proy => {
-                    const estado = proy.getAttribute('data-estado');
-                    if (filter === 'todos') {
-                        proy.style.display = 'flex';  // mostrar todos
-                    } else if (filter === 'activos' && estado === 'activo') {
-                        proy.style.display = 'flex';
-                    } else if (filter === 'futuros' && estado === 'futuro') {
-                        proy.style.display = 'flex';
-                    } else {
-                        proy.style.display = 'none';   // ocultar
-                    }
-                });
-            });
-        });
-
-        // ===== MODAL DE DETALLES =====
-        const modal = document.getElementById('modalProyecto');
-        const modalDesc = document.getElementById('modalDescripcion');
-        const cerrarModal = document.querySelector('.cerrar-modal-proyecto');
-        const botonesDetalles = document.querySelectorAll('.btn-detalles');
-
-        botonesDetalles.forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                e.preventDefault();
-                const descripcionHTML = btn.getAttribute('data-descripcion');
-                modalDesc.innerHTML = descripcionHTML;
-                modal.style.display = 'flex';
-            });
-        });
-
-        // Cerrar modal con botón X
-        cerrarModal.addEventListener('click', () => {
-            modal.style.display = 'none';
-        });
-
-        // Cerrar modal haciendo clic fuera del contenido
-        window.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                modal.style.display = 'none';
-            }
-        });
-
-        // Cerrar con tecla ESC
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && modal.style.display === 'flex') {
-                modal.style.display = 'none';
-            }
-        });
-    </script>
+    <script src="js/main.js" defer></script>
 </body>
 </html>
