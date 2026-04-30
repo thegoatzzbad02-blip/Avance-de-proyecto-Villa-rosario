@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos Comunitarios - Villa Rosario</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Los estilos específicos de proyectos están integrados en estilo.css (ver sección al final) -->
+</head>
+<body>
+    <!-- ==================== BARRA DE NAVEGACIÓN ==================== -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="imagenes/logo-villa-rosario.png" alt="Logo Villa Rosario" id="logo-img">
+                <div class="logo-text">
+                    <span class="logo-title">VILLA ROSARIO</span>
+                    <span class="logo-subtitle">Comunidad Organizada</span>
+                </div>
+            </a>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <ul class="nav-menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                <li><a href="consejo-comunal.html"><i class="fas fa-users"></i> Consejo Comunal</a></li>
+                <li><a href="articulos.html"><i class="fas fa-newspaper"></i> Noticias</a></li>
+                <li><a href="eventos.html"><i class="fas fa-calendar-alt"></i> Eventos</a></li>
+                <li><a href="proyectos.html" class="active"><i class="fas fa-rocket"></i> Proyectos</a></li>
+                <li><a href="servicios.html"><i class="fas fa-bolt"></i> Servicios</a></li>
+                <li><a href="emprendedores.html"><i class="fas fa-store"></i> Emprendedores</a></li>
+                <li><a href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ==================== ENCABEZADO DE PÁGINA ==================== -->
+    <header class="page-header" style="background: linear-gradient(135deg, var(--color-azul), var(--color-rojo));">
+        <div class="container">
+            <h1>Proyectos Comunitarios</h1>
+            <p>Conoce las iniciativas en curso y los planes futuros de Villa Rosario</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- SECCIÓN DE FILTROS (pestañas) -->
+            <div class="proyectos-tabs">
+                <button class="tab-btn active" data-tab="todos">📋 Todos</button>
+                <button class="tab-btn" data-tab="activos">🚧 En Progreso</button>
+                <button class="tab-btn" data-tab="futuros">📅 Próximos Proyectos</button>
+            </div>
+
+            <!-- GRID DE PROYECTOS (ejemplos) -->
+            <div id="proyectosGrid" class="proyectos-grid">
+                <!-- PROYECTO 1: Asfaltado (Activo) -->
+                <div class="proyecto-card" data-estado="activo">
+                    <div class="proyecto-imagen">
+                        <img src="imagenes/proyecto-asfaltado.jpg" alt="Asfaltado de calles" loading="lazy">
+                    </div>
+                    <div class="proyecto-info">
+                        <span class="proyecto-estado estado-activo">🚧 En Progreso</span>
+                        <h3>Asfaltado de Calles</h3>
+                        <p>Mejoramiento de las 4 calles principales con concreto asfáltico. Incluye drenajes y aceras.</p>
+                        <div class="proyecto-acciones">
+                            <a href="#" class="btn-detalles" data-descripcion="<strong>📊 Avance:</strong> 60% de la Calle 1 completada. Se espera finalizar en junio 2026.<br><strong>💰 Presupuesto:</strong> 500.000 Bs.<br><strong>👥 Responsable:</strong> Comité de Infraestructura">Ver detalles</a>
+                            <a href="documentos/plan-asfaltado.pdf" class="btn-pdf" target="_blank"><i class="fas fa-file-pdf"></i> Plano PDF</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROYECTO 2: Luminarias LED (Activo) -->
+                <div class="proyecto-card" data-estado="activo">
+                    <div class="proyecto-imagen">
+                        <img src="imagenes/proyecto-luminarias.jpg" alt="Alumbrado público LED" loading="lazy">
+                    </div>
+                    <div class="proyecto-info">
+                        <span class="proyecto-estado estado-activo">🚧 En Progreso</span>
+                        <h3>Alumbrado Público LED</h3>
+                        <p>Instalación de 40 nuevas luminarias LED en calles y espacios comunes para mayor seguridad y ahorro energético.</p>
+                        <div class="proyecto-acciones">
+                            <a href="#" class="btn-detalles" data-descripcion="<strong>📊 Avance:</strong> Instaladas 25 luminarias (62.5%).<br><strong>💡 Beneficio:</strong> Reducción del consumo eléctrico en 40%.<br><strong>📍 Próxima etapa:</strong> Calle 4 y plazoleta central.">Ver detalles</a>
+                            <a href="documentos/pliego-luminarias.pdf" class="btn-pdf" target="_blank"><i class="fas fa-file-pdf"></i> Especificaciones</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROYECTO 3: Ampliación Casa Comunal (Futuro) -->
+                <div class="proyecto-card" data-estado="futuro">
+                    <div class="proyecto-imagen">
+                        <img src="imagenes/proyecto-casa-comunal.jpg" alt="Ampliación Casa Comunal" loading="lazy">
+                    </div>
+                    <div class="proyecto-info">
+                        <span class="proyecto-estado estado-futuro">📅 Próximo</span>
+                        <h3>Ampliación Casa Comunal</h3>
+                        <p>Construcción de un segundo piso para sala de reuniones, área de informática comunitaria y archivo.</p>
+                        <div class="proyecto-acciones">
+                            <a href="#" class="btn-detalles" data-descripcion="<strong>📅 Inicio previsto:</strong> Julio 2026.<br><strong>⏱️ Duración:</strong> 4 meses.<br><strong>💰 Presupuesto:</strong> En gestión con alcaldía y gobernación.">Ver detalles</a>
+                            <a href="documentos/anteproyecto-casa-comunal.pdf" class="btn-pdf" target="_blank"><i class="fas fa-file-pdf"></i> Anteproyecto</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROYECTO 4: Recuperación de Áreas Verdes (Futuro) -->
+                <div class="proyecto-card" data-estado="futuro">
+                    <div class="proyecto-imagen">
+                        <img src="imagenes/proyecto-areas-verdes.jpg" alt="Recuperación de áreas verdes" loading="lazy">
+                    </div>
+                    <div class="proyecto-info">
+                        <span class="proyecto-estado estado-futuro">📅 Próximo</span>
+                        <h3>Recuperación de Áreas Verdes</h3>
+                        <p>Embellecimiento del Parque Central y zonas recreativas. Incluye jardinería, juegos infantiles y gimnasio al aire libre.</p>
+                        <div class="proyecto-acciones">
+                            <a href="#" class="btn-detalles" data-descripcion="<strong>🤝 Colaboradores:</strong> Misión Árbol, Alcaldía, Voluntarios.<br><strong>📅 Fecha estimada:</strong> Septiembre 2026.<br><strong>🗳️ Presupuesto participativo:</strong> Sí (aprobado en asamblea).">Ver detalles</a>
+                            <a href="documentos/diseno-parque.pdf" class="btn-pdf" target="_blank"><i class="fas fa-file-pdf"></i> Diseño</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ==================== MODAL PARA DETALLES DEL PROYECTO ==================== -->
+    <div id="modalProyecto" class="modal-proyecto">
+        <div class="modal-proyecto-content">
+            <span class="cerrar-modal-proyecto">&times;</span>
+            <h3>📌 Detalles del Proyecto</h3>
+            <div id="modalDescripcion"></div>
+        </div>
+    </div>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Comunidad Villa Rosario</h3>
+                    <p>Sector Sabilar, Parroquia Altagracia</p>
+                    <p>Municipio Sucre, Estado Sucre</p>
+                    <p>Fundada en 2009</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Proyecto Universitario</h3>
+                    <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 1rem;">
+                        <img src="imagenes/logo-uptos.png" alt="UPTOS" style="height: 60px;">
+                        <img src="imagenes/logo-pnf.png" alt="PNF Informática" style="height: 60px;">
+                    </div>
+                    <p>Estudiantes de Informática<br>UPTOS "Clodosbaldo Russián"</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Conéctate</h3>
+                    <p><i class="fas fa-phone"></i> <strong>Teléfono:</strong> 0293-123-4567</p>
+                    <p><i class="fas fa-envelope"></i> <strong>Email:</strong> consejo@villarosario.gob.ve</p>
+                    <p><i class="fas fa-clock"></i> <strong>Horario:</strong> Lunes a Viernes 8am-4pm</p>
+                    <a href="https://wa.me/584141234567?text=Hola,%20quisiera%20unirme%20al%20grupo%20de%20Villa%20Rosario" class="btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Unirse al grupo
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Comunidad Villa Rosario | Proyecto UPTOS - PNF Informática</p>
+                <p>Cumaná, Estado Sucre - Venezuela</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== SCRIPT ==================== -->
+    <script>
+        // ===== FILTRADO POR PESTAÑAS (TODOS / ACTIVOS / FUTUROS) =====
+        const tabs = document.querySelectorAll('.tab-btn');
+        const proyectos = document.querySelectorAll('.proyecto-card');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remover clase active de todas las pestañas
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                
+                const filter = tab.getAttribute('data-tab');
+                
+                proyectos.forEach(proy => {
+                    const estado = proy.getAttribute('data-estado');
+                    if (filter === 'todos') {
+                        proy.style.display = 'flex';  // mostrar todos
+                    } else if (filter === 'activos' && estado === 'activo') {
+                        proy.style.display = 'flex';
+                    } else if (filter === 'futuros' && estado === 'futuro') {
+                        proy.style.display = 'flex';
+                    } else {
+                        proy.style.display = 'none';   // ocultar
+                    }
+                });
+            });
+        });
+
+        // ===== MODAL DE DETALLES =====
+        const modal = document.getElementById('modalProyecto');
+        const modalDesc = document.getElementById('modalDescripcion');
+        const cerrarModal = document.querySelector('.cerrar-modal-proyecto');
+        const botonesDetalles = document.querySelectorAll('.btn-detalles');
+
+        botonesDetalles.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const descripcionHTML = btn.getAttribute('data-descripcion');
+                modalDesc.innerHTML = descripcionHTML;
+                modal.style.display = 'flex';
+            });
+        });
+
+        // Cerrar modal con botón X
+        cerrarModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        // Cerrar modal haciendo clic fuera del contenido
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+
+        // Cerrar con tecla ESC
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.style.display === 'flex') {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
